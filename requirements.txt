@@ -1,6 +1,6 @@
-pandas==2.2.0
-numpy==1.26.4
-scikit-learn==1.4.0
-joblib==1.3.2
-matplotlib==3.8.2
-pytest==8.3.5
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+pytest
