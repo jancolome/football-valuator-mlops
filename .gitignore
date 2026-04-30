@@ -1,4 +1,20 @@
-data/
+# Datos brutos (descargar de Kaggle)
+data/raw/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# macOS
 .DS_Store
+
+# Capturas
+capturas/
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
