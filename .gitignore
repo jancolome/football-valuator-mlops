@@ -18,3 +18,4 @@ venv/
 
 # Jupyter
 .ipynb_checkpoints/
+.Rhistory
