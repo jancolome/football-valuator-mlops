@@ -28,5 +28,5 @@ jobs:
       - name: Análisis estático con flake8
         run: flake8 tests/ --max-line-length=120 --extend-ignore=E501,W293,W292,E303
 
-      - name: Ejecutar tests con pytest
-        run: pytest tests/ -v
+      - name: Ejecutar tests con cobertura
+        run: pytest tests/ --cov=tests --cov-report=term-missing -v
