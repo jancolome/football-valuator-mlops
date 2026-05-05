@@ -39,6 +39,9 @@ Al subir el primer workflow YAML, el push fue rechazado porque el token no tení
 ### Subestimar el tiempo de los entregables no técnicos
 Pensaba que con el código terminado el resto sería rápido, pero la memoria, la presentación y el vídeo se llevan tanto tiempo como el código. La próxima vez bloquearía un sprint entero solo para entregables.
 
+### Primera versión de la presentación desbalanceada
+La primera versión de la PowerPoint puso demasiado peso en la parte de modelo (datos, distribuciones, comparativas académicas) y poco en la parte de implementación técnica MLOps (tests, CI/CD, Docker). Esto era un problema porque la implementación técnica vale el 35% de la nota mientras que la arquitectura solo el 20%. Tuve que rehacerla añadiendo 3 slides específicas para la parte técnica. Lección aprendida: revisar siempre los pesos de evaluación antes de empezar a maquetar entregables visuales.
+
 ---
 
 ## ¿Qué mejoraríamos? (Start)
@@ -50,7 +53,10 @@ En lugar de dejar la memoria para el final, ir documentando las decisiones técn
 Para evitar problemas como el de los warnings cosméticos de flake8, configurar pre-commit hooks que ejecuten flake8 en local antes de cada commit. Así los errores se detectan antes del push, no en el pipeline.
 
 ### Pensar en el vídeo desde el principio
-Si la entrega final es un vídeo, las decisiones de diseño deberían tener en cuenta cómo se van a contar visualmente. Algunos diagramas que tengo ahora son muy densos para vídeo. La próxima vez los diseñaría pensando en la cámara, no solo en una diapositiva estática.
+Si la entrega final es un vídeo, las decisiones de diseño deberían tener en cuenta cómo se van a contar visualmente. Algunos diagramas son muy densos para vídeo. La próxima vez los diseñaría pensando en la cámara, no solo en una diapositiva estática.
+
+### Repartir mejor los pesos de los entregables
+Ahora sé que en proyectos académicos hay que mirar los pesos de evaluación antes de decidir cuánto tiempo dedicar a cada parte. Si la implementación técnica vale el 35%, debería tener al menos el 35% del esfuerzo total, no acabar siendo lo que se hace al final con prisa.
 
 ---
 
@@ -67,7 +73,7 @@ Lo que SÍ funcionó fue una mezcla:
 3. **Tablero Kanban** como registro visual del progreso, no como herramienta de gestión en vivo. Lo monté hacia el final del proyecto, pero las decisiones que reflejaba eran reales.
 4. **Retrospectiva escrita** al final del proyecto, como esta. Esto sí aporta mucho valor: forzarse a reflexionar sobre lo que fue bien y lo que no, y dejarlo por escrito.
 
-Lo que el profesor explicó en clase sobre los "carriles de velocidad" del desarrollo (rápido sin SCRUM, medio híbrido, lento con SCRUM tradicional) tiene mucho sentido. Mi proyecto encaja en el carril rápido / medio: iteración continua, decisiones rápidas, documentación a posteriori.
+Mi proyecto encaja en un perfil de iteración rápida con decisiones inmediatas y documentación a posteriori, no en un SCRUM tradicional.
 
 ---
 
@@ -77,11 +83,15 @@ Lo que el profesor explicó en clase sobre los "carriles de velocidad" del desar
 |---|---|---|---|
 | Sprint 1 | 29 | 29 | 100% |
 | Sprint 2 | 16 | 16 | 100% |
-| Sprint 3 | 17 | 4 + 10 en curso | en progreso |
-| **Total proyecto** | **62** | **49 done + 10 wip** | **~95%** |
+| Sprint 3 | 17 | 14 done + 3 wip | ~82% al cierre |
+| **Total proyecto** | **62** | **59 done + 3 wip** | **~95%** |
+
+La parte que queda en "in progress" del sprint 3 es la grabación del vídeo, programada para el día 6 (día de la entrega).
 
 ---
 
 ## Conclusión personal
 
 El valor real de hacer este proyecto no fue el resultado del modelo (R² log 0.69 está en línea con la literatura, ni más ni menos), sino el proceso completo de MLOps: pasar de un notebook a un pipeline reproducible que cualquier persona puede clonar y ejecutar. Eso es lo que diferencia un ejercicio académico de un producto real.
+
+Si tuviera que destacar una sola lección que me llevo del proyecto, sería esta: **un buen modelo no es el que tiene mejores métricas, es el que se puede reproducir, validar automáticamente y desplegar de forma continua**. Y eso solo se consigue con un pipeline MLOps bien diseñado.
